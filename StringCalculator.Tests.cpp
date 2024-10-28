@@ -52,7 +52,7 @@ TEST(string_calculator_ass,when_passed_a_delimiter){
   //Arrange
   StringCalculator  objUnderTests;
   string input = "//;\n1;2";
-  int expectedValue = 8;
+  int expectedValue = 3;
   //ACT
   int actualValue = objUnderTests.Add(input);
   //ASSERT
