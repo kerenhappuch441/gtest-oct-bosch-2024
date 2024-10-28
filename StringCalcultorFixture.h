@@ -5,11 +5,11 @@
 
 class stringCalculatorAddfixture:public testing::Test
 {
-Stringcalculator objectundertest;
+StringCalculator objectundertest;
 
 void setup() overidden
 {
-  objectundertest = new Stringcalculator();
+  objectundertest = new StringCalculator();
 
 }
 void teardown()
