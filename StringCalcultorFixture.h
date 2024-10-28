@@ -27,3 +27,9 @@ TEST_F(StringCalculatorAddFixture, Returns_0_For_0){
   ASSERT_EQ(actualValue, expectedValue);
 }
 
+TEST_F(StringCalculatorAddFixture, Returns_$_For_$){
+  string input = "$";
+  int expectedValue = "$";
+  int actualValue = objUnderTest->Add(input);
+  ASSERT_EQ(actualValue, expectedValue);
+}
