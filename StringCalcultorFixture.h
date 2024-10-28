@@ -21,6 +21,6 @@ Test_F(stringCalculatorAddfixture,Returns_0_For_Empty)
   string input="";
   int expectedvalue=0;
   int actualvalue=objectundertest->Add(input);
-  AssertEQ(actualvalue==expectedvalue);
+  AssertEQ(actualvalue,expectedvalue);
 }
 
