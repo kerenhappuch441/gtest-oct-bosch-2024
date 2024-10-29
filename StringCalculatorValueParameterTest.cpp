@@ -2,8 +2,7 @@
 #include <gtest/gtest.h>
 #include <tuple>
 using namespace std;
-
-//Fixture Class
+ 
 class StringCalculatorAddFixture:public testing::Test{
   protected:
     StringCalculator *objUnderTest;
@@ -14,21 +13,18 @@ class StringCalculatorAddFixture:public testing::Test{
         delete objUnderTest;
   }
 };
-
-//Value Parameterized Fixture
+ 
 class StringCalculatorAddParameterizedFixture:
                                     public StringCalculatorAddFixture,
-                                    public testing::WithParamInterface<tuple<string,int>>{
-
+                                    public testing::WithParamInterface<tuple<string,int>>{ 
 };
 INSTANTIATE_TEST_SUITE_P(ValidValuesDataSet,StringCalculatorAddParameterizedFixture,testing::Values(
-  make_tuple("",0),make_tuple("0",0),make_tuple("1",1),make_tuple("1,2",3)
+  make_tuple("",0),make_tuple("0",0),make_tuple("1",1),make_tuple("1,2",3),make_tuple("//[**][%^]\n4**1%^9", 14),make_tuple("//;\n1;2"), 3),make_tuple("42,1001,3",45),make_tuple("//[***]\n8***2***3", 13),make_tupled("//[*][%]\n4*2%3", 9) 
 ));
 INSTANTIATE_TEST_SUITE_P(NegetiveValuesDataSet,StringCalculatorAddParameterizedFixture,testing::Values(
-  make_tuple("",10),make_tuple("0",12),make_tuple("1",10),make_tuple("1,2",6)
+  make_tuple("1,-2,-4,5", std::invalid_argument)
 ));
-
-
+ 
 TEST_P(StringCalculatorAddParameterizedFixture, DataDrivenTestCase){
     string input=std::get<0>(GetParam());
     int expectedValue=std::get<1>(GetParam());
