@@ -16,6 +16,8 @@ class StringCalculatorAddFixture: public testing::Test{
   objUnderTest = new StringCalculator();
 
   }
+void assertEachDataRow(String input, int expectedValue);
+
 
   void TearDown(){
 
