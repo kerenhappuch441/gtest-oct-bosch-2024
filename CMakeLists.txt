@@ -18,15 +18,10 @@ enable_testing()
 add_compile_options("--coverage")
 add_executable(
   unittestcode
- BNFSpeedSensor.cpp
- ConsoleLogger.cpp
- ILogger.h
- IMessageCommunicator.h
- IOTCloudCommunicator.cpp
- ISpeedSensor.h
+
  VehicleSpeedMonitor.Tests.cpp
  VehicleSpeedMonitor.cpp
- VehicleSpeedMonitor.h
+
  )
 target_link_libraries(
   unittestcode
