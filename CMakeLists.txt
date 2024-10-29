@@ -18,7 +18,7 @@ enable_testing()
 add_compile_options("--coverage")
 add_executable(
   unittestcode
-  StringCalcultorFixture.h
+ StringCalculatorDataDrive.cpp
  )
 target_link_libraries(
   unittestcode
