@@ -16,7 +16,12 @@ class StringCalculatorAddFixture: public testing::Test{
   objUnderTest = new StringCalculator();
 
   }
-void assertEachDataRow(String input, int expectedValue);
+void assertEachDataRow(string input, int expectedValue)
+{
+ int actualValue = objUnderTest->Add(input);
+  ASSERT_EQ(actualValue, expectedValue);
+
+}
 
 
   void TearDown(){
@@ -26,12 +31,7 @@ void assertEachDataRow(String input, int expectedValue);
   }
 
 };
-void assertEachDataRow(String input, int expectedValue)
-{
- int actualValue = objUnderTest->Add(input);
-  ASSERT_EQ(actualValue, expectedValue);
 
-}
  
 TEST_F(StringCalculatorAddFixture, DataDriveTest){
 
