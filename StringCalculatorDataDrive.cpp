@@ -3,6 +3,7 @@
 #include <gtest/gtest.h>
 
 #include<vector>
+using namespace std;
  
 class StringCalculatorAddFixture: public testing::Test{
 
@@ -23,17 +24,24 @@ class StringCalculatorAddFixture: public testing::Test{
   }
 
 };
- 
-TEST_F(StringCalculatorAddFixture, Returns_0_For_Empty){
-
-  string input = "";
-
-  int expectedValue = 0;
-
-  int actualValue = objUnderTest->Add(input);
-
+void assertEachDataRow(String input, int expectedValue)
+{
+ int actualValue = objUnderTest->Add(input);
   ASSERT_EQ(actualValue, expectedValue);
 
+}
+ 
+TEST_F(StringCalculatorAddFixture, DataDriveTest){
+
+ vector<tuple<string,int>>dataSet;
+ dataSet.push_back(make_tuple("",0);
+ dataSet.push_back(make_tuple("",0);
+ dataSet.push_back(make_tuple("",0);
+ dataSet.push_back(make_tuple("",0);
+ 
+ for(tuple<string,int> dataRow : dataSet){
+  assertEachDataRow(dataRow.get<string>(0),dataRow.get<int>(1));
+ }
 }
  
 TEST_F(StringCalculatorAddFixture, Returns_0_For_0){
