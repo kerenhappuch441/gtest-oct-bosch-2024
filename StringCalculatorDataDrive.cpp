@@ -36,10 +36,10 @@ void assertEachDataRow(string input, int expectedValue)
 TEST_F(StringCalculatorAddFixture, DataDriveTest){
 
  vector<tuple<string,int>>dataSet;
- dataSet.push_back(make_tuple("",0);
- dataSet.push_back(make_tuple("",0);
- dataSet.push_back(make_tuple("",0);
- dataSet.push_back(make_tuple("",0);
+ dataSet.push_back(make_tuple("",0));
+ dataSet.push_back(make_tuple("",0));
+ dataSet.push_back(make_tuple("",0));
+ dataSet.push_back(make_tuple("",0));
  
  for(tuple<string,int> dataRow : dataSet){
   assertEachDataRow(std::get<string><0>,dataRow.get<int>(1));
