@@ -1,0 +1,7 @@
+﻿Test case name ;Scenario;Input;Ouput
+;;;
+Test the valid speed range;Validates SpeedThrehold Value is in Range(speed >1 and <100) ;Speed;Log
+Test the Converstion from KMPH to miles;If the SpeedThreshold is valid convert the KMPH to miles;Current speed;Log with converted to mph
+Test to Push the message to contact server;Check for the status code and communicate with contact server;message;Log
+Test the invalid speed range;Validates SpeedThrehold Value is in Range(speed >1 and <100) ;Speed;Log
+Test to Push the message to contact server;Check for the status code for error and communicate with contact server;Speed;Log
