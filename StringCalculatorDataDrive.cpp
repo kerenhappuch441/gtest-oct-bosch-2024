@@ -42,7 +42,7 @@ TEST_F(StringCalculatorAddFixture, DataDriveTest){
  dataSet.push_back(make_tuple("",0));
  
  for(tuple<string,int> dataRow : dataSet){
-  assertEachDataRow(std::get<string><0>,dataRow.get<int>(1));
+  assertEachDataRow(std::get<0>(dataRow),std::get<1>(dataRow);
  }
 }
  
