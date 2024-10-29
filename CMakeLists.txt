@@ -24,7 +24,9 @@ add_executable(
  IMessageCommunicator.h
  IOTCloudCommunicator.cpp
  ISpeedSensor.h
- 
+ VehicleSpeedMonitor.Tests.cpp
+ VehicleSpeedMonitor.cpp
+ VehicleSpeedMonitor.h
  )
 target_link_libraries(
   unittestcode
