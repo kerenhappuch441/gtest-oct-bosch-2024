@@ -1,6 +1,8 @@
 #include "StringCalculator.h"
 
 #include <gtest/gtest.h>
+
+#include<vector>
  
 class StringCalculatorAddFixture: public testing::Test{
 
